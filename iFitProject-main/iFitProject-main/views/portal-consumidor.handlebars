@@ -1,0 +1,52 @@
+
+  <section class="form-cardapio">
+      <div class="container">
+        <h1 class="text-center pt-5 pb-5">Gerenciar Cardápio</h1>
+        <div class="text-center pb-5">
+          <label for="selectRestaurante" class="text-center">Selecione um restaurante</label><br>
+          <select name="form-control selectRestaurantes " id="selectRestaurantes">
+            <option value="restaurante">Restaurante Grande Familía</option>
+          </select>
+        </div>
+        <div id="tabs">
+  <div class="container">
+    <table class="table">
+        <div id="tabs">  
+      <thead>
+        <tr>
+          <th>Refeição</th>
+          <th>Descrição</th>
+          <th>Calorias</th>
+          <th>Proteínas</th>
+          <th>Carboidratos</th>
+          <th>Gorduras</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{!-- inserção do bando de dados --}}
+        {{#each cardapios_prestadors}}
+        <tr>
+          <td>{{dataValues.refeicao}}</td>
+          <td>{{dataValues.descricao}}</td>
+          <td>{{dataValues.calorias}}</td>
+          <td>{{dataValues.proteinas}}</td>
+          <td>{{dataValues.carboidratos}}</td>
+          <td>{{dataValues.gorduras}}</td>
+          <td>{{dataValues.valorCardapio}}</td>
+          <td>
+            <a href="/visualizarPedidos/refeicaoId/{{dataValues.id}}" class="btn btn-primary fazer-pedido">Fazer Pedido</a>
+          </td>
+        </tr>
+        
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+
+          
